@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Epilogue';
+    src: url('../fonts/Epilogue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Termina';
+    src: url('../fonts/Termina-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --title-font: 'Termina', sans-serif;
+    --body-font: 'Epilogue', sans-serif;
+
+    --font-bold: 700;
+    --font-normal: 400;
+
+    --green: #2d6e5a;
+    --black: #0b0c13;
+    --white: #eefcfc;
+
+    --color-terminal: #292b36;
+    --borde-redondo: 4px;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: var(--font-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    font-weight: var(--font-bold);
+}
+
+h1 {
+    font-size: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+    margin: 0;
+}
+
+
+body {
+    min-height: 95dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+main {
+    padding: 25px;
+    box-shadow: 8px 8px 35px 0px rgb(0 0 0 / 75%);
+    border-radius: var(--borde-redondo);
+}
+
+#input-original,
+#resultado {
+    background-color: var(--color-terminal);
+    width: -webkit-fill-available;
+}
+
+#input-original {
+    margin: 10px 0 0;
+    padding: 10px;
+    color: var(--white);
+    border-top-left-radius: var(--borde-redondo);
+    border-top-right-radius: var(--borde-redondo);
+}
+
+#resultado {
+    height: 20px;
+    color: #5af78d;
+    padding: 0 10px 10px;
+    border-bottom-left-radius: var(--borde-redondo);
+    border-bottom-right-radius: var(--borde-redondo);
+}
+
+.rango {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    text-align: center;
+    align-items: center;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    border-radius: var(--borde-redondo);
+    background: var(--color-terminal);
+    margin: 0;
+    padding: 0 5px;
+    height: 20px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: var(--white);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
