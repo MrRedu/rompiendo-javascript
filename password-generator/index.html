@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Generador de Contraseñas</title>
+
+    <script src="./js/main.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="titulo">Generador de Contraseñas</h1>
+        <form autocomplete="off" id="formulario">
+            <div>
+                <label for="longitudInput">Longitud</label>
+                <input type="number" value="20" min="8" max="64" id="longitudInput">
+            </div>
+            <div>
+                <input type="checkbox" id="mayusculasCheckbox" checked>
+                <label for="mayusculasCheckbox">Incluir letras mayúsculas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numerosCheckbox" checked>
+                <label for="numerosCheckbox">Incluir números</label>
+            </div>
+            <div>
+                <input type="checkbox" id="simbolosCheckbox" checked>
+                <label for="simbolosCheckbox">Incluir símbolos</label>
+            </div>
+            <div>
+                <button type="button" id="btnGenerate">Generar</button>
+            </div>
+        </form>
+
+        <div id="generatedPassword"></div>
+    </main>
+
+</body>
+
+</html>
